@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="true"/>
+
+    <package name="basicstruts2" extends="struts-default">
+
+        <default-interceptor-ref name="defaultStack"></default-interceptor-ref>
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+
+        <action name="ejercicio2" class="actions.Ejercicio2Action">
+            <result name="success">/jsp/ejercicio2.jsp</result>
+        </action>
+        <action name="ejercicio2b" class="actions.Ejercicio2Action">
+            <result name="input">/jsp/ejercicio2b.jsp</result>
+            <result name="success">/jsp/ejercicio2b.jsp</result>
+        </action>
+
+        <action name="carga" method="upload" class="actions.CargaAction">
+            <interceptor-ref name="fileUpload">
+                <param name="maximumSize">1024000</param>
+                <param name="allowedTypes">image/gif,image/jpeg,image/png</param>
+            </interceptor-ref>
+            <interceptor-ref name="basicStack"/>
+            <result name="input">/jsp/cargaFichero.jsp</result>
+            <result name="success">/jsp/cargaFichero.jsp</result>
+        </action>
+
+    </package>
+
+</struts>
