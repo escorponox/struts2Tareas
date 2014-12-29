@@ -1,2 +1,3 @@
 struts2Tareas.iml
-    target/
+target/
+.idea/
