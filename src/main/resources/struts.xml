@@ -9,19 +9,17 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
     <constant name="struts.devMode" value="true"/>
 
-    <package name="basicstruts2" extends="struts-default">
+    <package name="basicstruts2" namespace="/" extends="struts-default">
 
-        <default-interceptor-ref name="defaultStack"></default-interceptor-ref>
-        <action name="index">
-            <result>/index.jsp</result>
-        </action>
+        <default-action-ref name="ejercicio2"/>
 
         <action name="ejercicio2" class="actions.Ejercicio2Action">
-            <result name="success">/jsp/ejercicio2.jsp</result>
+            <result>/jsp/ejercicio2.jsp</result>
         </action>
-        <action name="ejercicio2b" class="actions.Ejercicio2Action">
-            <result name="input">/jsp/ejercicio2b.jsp</result>
-            <result name="success">/jsp/ejercicio2b.jsp</result>
+
+        <action name="ejercicio2b" class="actions.Ejercicio2Action" method="agregar">
+            <result name="input">/jsp/ejercicio2.jsp</result>
+            <result name="success">/jsp/mostrar2.jsp</result>
         </action>
 
         <action name="carga" method="upload" class="actions.CargaAction">
@@ -33,6 +31,7 @@
             <result name="input">/jsp/cargaFichero.jsp</result>
             <result name="success">/jsp/cargaFichero.jsp</result>
         </action>
+
 
     </package>
 

@@ -7,26 +7,31 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 public class Ejercicio2Action extends ActionSupport {
 
-    private String nombre;
-    private String age;
+	private String nombre;
+	private int age;
 
-    public String execute() {
-            return SUCCESS;
-    }
+	public String agregar() {
+		if ("".equals(this.nombre)) {
+			return INPUT;
+		}
+		else {
+			return SUCCESS;
+		}
+	}
 
-    public String getNombre() {
-        return nombre;
-    }
+	public String getNombre() {
+		return nombre;
+	}
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-    public String getAge() {
-        return age;
-    }
+	public int getAge() {
+		return age;
+	}
 
-    public void setAge(String age) {
-        this.age = age;
-    }
+	public void setAge(int age) {
+		this.age = age;
+	}
 }

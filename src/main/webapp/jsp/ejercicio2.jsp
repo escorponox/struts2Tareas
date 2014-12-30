@@ -13,10 +13,13 @@
 </head>
 <body>
 
-<s:form action="ejercicio2b">
-    <s:textfield name="nombre" label="Nombre"/>
-    <s:textfield name="age" label="Age" size="20"/>
-asdfasdf
+<s:if test="errors.size()>0">
+    <ul><s:fielderror/></ul>
+</s:if>
+
+<s:form action="ejercicio2b" method="POST">
+    <s:textfield name="nombre" id="nombre" label="Nombre"/>
+    <s:textfield name="age" id="age" label="Edad" size="20"/>
     <s:submit value="Submit"/>
 </s:form>
 
