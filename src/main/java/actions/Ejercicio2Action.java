@@ -2,21 +2,35 @@ package actions;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import java.util.*;
+
 /**
  * Created by Carlos Coves Prieto on 11/23/14.
  */
 public class Ejercicio2Action extends ActionSupport {
 
-    static final String id = "usuario";
-    static final String pass = "password";
+    static final String ID = "usuario";
+    static final String PASS = "password";
 
     private String userId;
     private String password;
     private String name;
     private int age;
+    private String presentation;
+    private boolean wireFan;
+    private String saga;
+    private Map<String,String> sagas;
+
+    public Ejercicio2Action() {
+        this.sagas = new LinkedHashMap<>();
+        this.sagas.put("SW", "Star Wars");
+        this.sagas.put("E", "Ender");
+        this.sagas.put("LotR", "Lord of the Rings");
+        this.sagas.put("T", "Terminator");
+    }
 
     public String agregar() {
-        if (id.equals(userId) && pass.equals(password)) {
+        if (ID.equals(userId) && PASS.equals(password)) {
             return SUCCESS;
         } else {
             addActionError("User and password Error");
@@ -54,5 +68,41 @@ public class Ejercicio2Action extends ActionSupport {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getPresentation() {
+        return presentation;
+    }
+
+    public void setPresentation(String presentation) {
+        this.presentation = presentation;
+    }
+
+    public boolean isWireFan() {
+        return wireFan;
+    }
+
+    public void setWireFan(boolean wireFan) {
+        this.wireFan = wireFan;
+    }
+
+    public String getSaga() {
+        return saga;
+    }
+
+    public void setSaga(String saga) {
+        this.saga = saga;
+    }
+
+    public Map<String,String> getSagas() {
+        return sagas;
+    }
+
+    public void setSagas(Map<String,String> sagas) {
+        this.sagas = sagas;
+    }
+
+    public String init() throws Exception {
+        return "success";
     }
 }

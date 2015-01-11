@@ -11,7 +11,7 @@
 
         <default-action-ref name="ejercicio2"/>
 
-        <action name="ejercicio2">
+        <action name="ejercicio2" class="actions.Ejercicio2Action" method="init">
             <result>/jsp/ejercicio2.jsp</result>
         </action>
 

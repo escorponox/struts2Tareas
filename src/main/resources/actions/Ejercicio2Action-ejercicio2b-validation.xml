@@ -32,5 +32,14 @@
             </message>
         </field-validator>
     </field>
-
+    <field name="presentation">
+        <field-validator type="requiredstring">
+            <message>Presentation is required</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="minLength">20</param>
+            <param name="maxLength">200</param>
+            <message>Presentation length must be between 20 and 200</message>
+        </field-validator>
+    </field>
 </validators>
