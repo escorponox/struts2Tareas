@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+        "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+        "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+        <field name="nombre">
+                <field-validator type="stringlength">
+                        <param name="minLength">4</param>
+                        <param name="maxLength">10</param>
+                        <message>
+                                The name is required.
+                        </message>
+                </field-validator>
+        </field>
+        <field name="age">
+                <field-validator type="int">
+                        <param name="min">28</param>
+                        <param name="max">65</param>
+                        <message>
+                                Age must be in between 28 and 65
+                        </message>
+                </field-validator>
+        </field>
+
+        <validator type="requiredstring">
+                <param name="fieldName">nombre</param>
+                <message>First name is required.</message>
+        </validator>
+</validators>
