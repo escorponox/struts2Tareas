@@ -7,26 +7,52 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 public class Ejercicio2Action extends ActionSupport {
 
-	private String name;
-	private int age;
+    static final String id = "usuario";
+    static final String pass = "password";
 
-	public String agregar() {
-			return SUCCESS;
-	}
+    private String userId;
+    private String password;
+    private String name;
+    private int age;
 
-	public String getName() {
-		return name;
-	}
+    public String agregar() {
+        if (id.equals(userId) && pass.equals(password)) {
+            return SUCCESS;
+        } else {
+            addActionError("User and password Error");
+            return INPUT;
+        }
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public int getAge() {
-		return age;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setAge(int age) {
-		this.age = age;
-	}
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

@@ -1,27 +1,36 @@
 <!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
         "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
 <validators>
-
-        <field name="name">
-                <field-validator type="requiredstring">
-                        <message>Name is required</message>
-                </field-validator>
-                <field-validator type="stringlength">
-                        <param name="minLength">1</param>
-                        <param name="maxLength">20</param>
-                        <message>
-                                Name length must be between 1 and 20
-                        </message>
-                </field-validator>
-        </field>
-        <field name="age">
-                <field-validator type="int">
-                        <param name="min">28</param>
-                        <param name="max">65</param>
-                        <message>
-                                Age must be in between 28 and 65
-                        </message>
-                </field-validator>
-        </field>
+    <field name="userId">
+        <field-validator type="requiredstring">
+            <message>User is required</message>
+        </field-validator>
+    </field>
+    <field name="password">
+        <field-validator type="requiredstring">
+            <message>Password is required</message>
+        </field-validator>
+    </field>
+    <field name="name">
+        <field-validator type="requiredstring">
+            <message>Name is required</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="minLength">1</param>
+            <param name="maxLength">20</param>
+            <message>
+                Name length must be between 1 and 20
+            </message>
+        </field-validator>
+    </field>
+    <field name="age">
+        <field-validator type="int">
+            <param name="min">28</param>
+            <param name="max">65</param>
+            <message>
+                Age must be in between 28 and 65
+            </message>
+        </field-validator>
+    </field>
 
 </validators>
