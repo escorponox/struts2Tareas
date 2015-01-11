@@ -32,7 +32,7 @@
     <s:textfield name="age" id="age" label="Age" size="3"/>
     <s:textarea name="presentation" id="presentation" label="Presentation" cols="20" rows="5"/>
     <s:checkbox name="wireFan" id="wireFan" label="'The Wire' Fan"/>
-    <s:select list="sagas" name="saga" label="Favourite Saga"/>
+    <s:select list="sagas" name="saga" label="Favourite Saga" value="defaultSagas"/>
     <s:submit value="Submit"/>
     <s:reset/>
 </s:form>

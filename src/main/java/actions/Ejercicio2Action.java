@@ -29,6 +29,10 @@ public class Ejercicio2Action extends ActionSupport {
         this.sagas.put("T", "Terminator");
     }
 
+    public String init() throws Exception {
+        return "success";
+    }
+
     public String agregar() {
         if (ID.equals(userId) && PASS.equals(password)) {
             return SUCCESS;
@@ -102,7 +106,7 @@ public class Ejercicio2Action extends ActionSupport {
         this.sagas = sagas;
     }
 
-    public String init() throws Exception {
-        return "success";
+    public String getDefaultSagas() {
+        return "T";
     }
 }
