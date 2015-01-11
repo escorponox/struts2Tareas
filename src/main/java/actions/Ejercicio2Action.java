@@ -15,11 +15,18 @@ public class Ejercicio2Action extends ActionSupport {
     private String userId;
     private String password;
     private String name;
+    private String sex;
     private int age;
+    private Date birthday;
+    private String email;
+    private String phone;
+    private String url;
     private String presentation;
     private boolean wireFan;
     private String saga;
     private Map<String,String> sagas;
+    private Map<String,String> subSagas;
+    private Map<String,String> sexes;
 
     public Ejercicio2Action() {
         this.sagas = new LinkedHashMap<>();
@@ -27,6 +34,15 @@ public class Ejercicio2Action extends ActionSupport {
         this.sagas.put("E", "Ender");
         this.sagas.put("LotR", "Lord of the Rings");
         this.sagas.put("T", "Terminator");
+
+        this.subSagas = new LinkedHashMap<>();
+        this.subSagas.put("C", "Crepusculo");
+        this.subSagas.put("LJH", "Los Juegos del Hambre");
+        this.subSagas.put("ECL", "El Corredor del Laberinto");
+
+        this.sexes = new LinkedHashMap<>();
+        this.sexes.put("M", "Man");
+        this.sexes.put("W", "Woman");
     }
 
     public String init() throws Exception {
@@ -108,5 +124,61 @@ public class Ejercicio2Action extends ActionSupport {
 
     public String getDefaultSagas() {
         return "T";
+    }
+
+    public Map<String, String> getSubSagas() {
+        return subSagas;
+    }
+
+    public void setSubSagas(Map<String, String> subSagas) {
+        this.subSagas = subSagas;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Map<String, String> getSexes() {
+        return sexes;
+    }
+
+    public void setSexes(Map<String, String> sexes) {
+        this.sexes = sexes;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
