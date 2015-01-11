@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE validators PUBLIC
-        "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
-        "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
-
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
 <validators>
-        <field name="nombre">
+
+        <field name="name">
+                <field-validator type="requiredstring">
+                        <message>Name is required</message>
+                </field-validator>
                 <field-validator type="stringlength">
-                        <param name="minLength">4</param>
-                        <param name="maxLength">10</param>
+                        <param name="minLength">1</param>
+                        <param name="maxLength">20</param>
                         <message>
-                                The name is required.
+                                Name length must be between 1 and 20
                         </message>
                 </field-validator>
         </field>
@@ -24,8 +24,4 @@
                 </field-validator>
         </field>
 
-        <validator type="requiredstring">
-                <param name="fieldName">nombre</param>
-                <message>First name is required.</message>
-        </validator>
 </validators>

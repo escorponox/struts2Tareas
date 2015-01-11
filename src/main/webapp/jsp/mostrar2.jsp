@@ -9,7 +9,7 @@
 <table id="tablaResultados">
     <tr>
         <td>Nombre</td>
-        <td><s:property value="nombre"/></td>
+        <td><s:property value="name"/></td>
     </tr>
     <tr>
         <td>Age</td>

@@ -17,9 +17,9 @@
     <ul><s:fielderror/></ul>
 </s:if>
 
-<s:form action="ejercicio2b" method="POST">
-    <s:textfield name="nombre" id="nombre" label="Nombre"/>
-    <s:textfield name="age" id="age" label="Edad" size="20"/>
+<s:form action="ejercicio2b" method="post">
+    <s:textfield name="name" id="name" label="Name"/>
+    <s:textfield name="age" id="age" label="Age" size="3"/>
     <s:submit value="Submit"/>
 </s:form>
 
