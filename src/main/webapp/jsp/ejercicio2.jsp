@@ -40,6 +40,7 @@
     <s:select list="sagas" name="saga" label="Favourite Saga" value="defaultSagas">
         <s:optgroup list="subSagas" label="Teenager"/>
     </s:select>
+    <s:checkboxlist list="checklist" name="check" label="Checklist" id="checklist"/>
     <s:submit value="Submit"/>
     <s:reset/>
 </s:form>

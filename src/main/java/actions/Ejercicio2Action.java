@@ -24,9 +24,11 @@ public class Ejercicio2Action extends ActionSupport {
     private String presentation;
     private boolean wireFan;
     private String saga;
+    private String[] check;
     private Map<String,String> sagas;
     private Map<String,String> subSagas;
     private Map<String,String> sexes;
+    private Map<String,String> checklist;
 
     public Ejercicio2Action() {
         this.sagas = new LinkedHashMap<>();
@@ -43,6 +45,12 @@ public class Ejercicio2Action extends ActionSupport {
         this.sexes = new LinkedHashMap<>();
         this.sexes.put("M", "Man");
         this.sexes.put("W", "Woman");
+
+        this.checklist = new LinkedHashMap<>();
+        this.checklist.put("M", "Checklist1");
+        this.checklist.put("W", "Checklist2");
+
+        this.check = new String[2];
     }
 
     public String init() throws Exception {
@@ -180,5 +188,21 @@ public class Ejercicio2Action extends ActionSupport {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public Map<String, String> getChecklist() {
+        return checklist;
+    }
+
+    public void setChecklist(Map<String, String> checklist) {
+        this.checklist = checklist;
+    }
+
+    public String[] getCheck() {
+        return check;
+    }
+
+    public void setCheck(String[] check) {
+        this.check = check;
     }
 }
